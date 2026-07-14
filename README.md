@@ -164,7 +164,7 @@ Or run your own:
 Runs on `gpt-4o-mini`. A full evaluation costs roughly **$0.002**.
 
 ## Repo layout
-
+```
 workflow.yml              Dify DSL — import this
 extract.md
 score.md                  the rubric that matters
@@ -174,7 +174,7 @@ verdict.py                the decision rules
 skip-quote-app.md         real output, all three verdicts
 build-changelog-tool.md
 improve-price-tracker.md
-
+```
 ## What I'd change next
 
 - **Score variance.** The thresholds are deterministic, but the *scores* are not
