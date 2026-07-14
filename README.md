@@ -10,8 +10,9 @@ Most AI tools encourage you. This one is willing to say no.
 
 ## Why this is a workflow, not a prompt
 
-The first version was a single agent. One large system prompt did everything:
-analyze the idea, decide the verdict, propose an MVP, write the launch post.
+The first version was a single agent on Coze. One large system prompt did
+everything: analyze the idea, decide the verdict, propose an MVP, write the
+launch post.
 
 It was fast to build. It was also unreliable, in four specific ways.
 
@@ -32,9 +33,12 @@ use enums — `REQUIRED / NOT_REQUIRED`, `HIGH / LOW`. A model that has to pick 
 generation all shared the same context. A bad extraction quietly poisoned the
 verdict, and there was no way to tell which step had failed.
 
-v0.2 splits those four jobs into separate nodes, and moves the decision out of
-the model entirely into a Code node with fixed thresholds. When something goes
-wrong now, I can see *which node* went wrong.
+None of this is really a complaint about Coze — a single prompt would fail the
+same way on any platform. The problem was the architecture, not the tool.
+
+v0.2 rebuilds it as a Dify workflow. Those four jobs become four separate nodes,
+and the decision moves out of the model entirely into a Code node with fixed
+thresholds. When something goes wrong now, I can see *which node* went wrong.
 
 That mattered almost immediately.
 
