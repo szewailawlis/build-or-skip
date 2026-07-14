@@ -6,7 +6,7 @@ Most AI tools encourage you. This one is willing to say no.
 
 **[Try it →](https://udify.app/workflow/XKdySsK4Nt1oD5XH)**
 
-![workflow](assets/workflow.png)
+![workflow](workflow.png)
 
 ## Why this is a workflow, not a prompt
 
@@ -145,7 +145,7 @@ opinion about. Four cases, four hits:
 | After-school program finder for parents | 4 | 4 | 3 | **IMPROVE** |
 | Daily motivational quote app | 3 | 2 | 4 | **SKIP** |
 
-Full reports in [`examples/`](examples/).
+Full reports: [SKIP](skip-quote-app.md) · [BUILD](build-changelog-tool.md) · [IMPROVE](improve-price-tracker.md)
 
 Worth noticing: the quote app and the changelog tool have *nearly the same
 feasibility score*. Feasibility carries almost no signal on its own. Everything
@@ -165,12 +165,15 @@ Runs on `gpt-4o-mini`. A full evaluation costs roughly **$0.002**.
 
 ## Repo layout
 
-```
-workflow.yml          Dify DSL — import this
-prompts/              The three LLM prompts, as plain text
-code/verdict.py       The decision rules
-examples/             Real output for all three verdicts
-```
+workflow.yml              Dify DSL — import this
+extract.md
+score.md                  the rubric that matters
+report.md
+branch_instructions.md
+verdict.py                the decision rules
+skip-quote-app.md         real output, all three verdicts
+build-changelog-tool.md
+improve-price-tracker.md
 
 ## What I'd change next
 
